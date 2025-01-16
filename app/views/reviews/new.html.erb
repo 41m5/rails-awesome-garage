@@ -1,0 +1,10 @@
+<div class="form">
+  <div class="card-form">
+    <h1>Leave a review for <%= @car.brand %></h1>
+    <%= simple_form_for [@car, @review] do |f| %>
+      <%= f.input :comment %>
+      <%= f.input :rating, input_html: { type: 'range', min: 0, max: 5, step: 1 }, label: "Rating (0 to 5)" %>
+      <%= f.submit class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>

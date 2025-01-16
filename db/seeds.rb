@@ -21,6 +21,6 @@ owner3 = Owner.create(nickname: "Dom Toretto")
 # Create Cars
 car1 = owner1.cars.create(brand: "Batmobile", model: "Lincoln Futura", year: 1966, fuel: "Atomic batteries")
 car2 = owner2.cars.create(brand: "Greased Lightning", model: "Ford Super De Luxe", year: 1948, fuel: "Petrol")
-car3 = owner3.cars.create(brand: "Fast & The Furious", model: "1970 Dodge Charger R/T", year: 1970, fuel: "Diesel")
+car3 = owner3.cars.create(brand: "Fast & The Furious", model: "Dodge Charger R/T", year: 1970, fuel: "Diesel")
 
 puts "Seeded #{Owner.count} owners and #{Car.count} cars."

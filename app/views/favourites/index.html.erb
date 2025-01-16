@@ -1,0 +1,5 @@
+<ul>
+  <% @favourites.each do |favourite| %>
+    <li><%= favourite.car.brand %> - <%= favourite.car.model %></li>
+  <% end %>
+</ul>

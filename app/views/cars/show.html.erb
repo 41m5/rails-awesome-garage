@@ -1,0 +1,34 @@
+<h1><%= @car.brand %></h1>
+<p>Model: <%= @car.model %></p>
+<p>Year: <%= @car.year %></p>
+<p>Fuel: <%= @car.fuel %></p>
+
+<div class="form">
+  <div class="card-form">
+    <%= simple_form_for [@car, @favourite] do |f| %>
+      <%= f.submit "Add #{@car.brand} to garage", class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="form">
+    <h3>Leave a comment for <%= @car.brand %></h3>
+    <%= simple_form_for [@car, @review] do |f| %>
+      <%= f.input :comment %>
+      <%= f.input :rating, input_html: { type: 'range', min: 0, max: 5, step: 1 }, label: "Rating (0 to 5)" %>
+      <%= f.submit "Submit review", class: "btn btn-success" %>
+    <% end %>
+</div>
+
+
+<h3>Comments</h3>
+
+<ul>
+  <% @reviews.each do |review| %>
+    <li>"<%= review.comment %>"
+    | Rating: <%= review.rating %></li>
+  <% end %>
+</ul>
+
+
+<%# <%= link_to "Leave a review", new_car_review_path(@car), class: "btn btn-primary" %>
