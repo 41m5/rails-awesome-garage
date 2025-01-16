@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_01_16_102134) do
+ActiveRecord::Schema[7.1].define(version: 2025_01_16_113640) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,17 +19,17 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_16_102134) do
     t.string "model"
     t.integer "year"
     t.string "fuel"
-    t.bigint "owners_id", null: false
+    t.bigint "owner_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["owners_id"], name: "index_cars_on_owners_id"
+    t.index ["owner_id"], name: "index_cars_on_owner_id"
   end
 
   create_table "favourites", force: :cascade do |t|
-    t.bigint "cars_id", null: false
+    t.bigint "car_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["cars_id"], name: "index_favourites_on_cars_id"
+    t.index ["car_id"], name: "index_favourites_on_car_id"
   end
 
   create_table "owners", force: :cascade do |t|
@@ -39,15 +39,15 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_16_102134) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string "comment"
+    t.text "comment"
     t.integer "rating"
-    t.bigint "cars_id", null: false
+    t.bigint "car_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["cars_id"], name: "index_reviews_on_cars_id"
+    t.index ["car_id"], name: "index_reviews_on_car_id"
   end
 
-  add_foreign_key "cars", "owners", column: "owners_id"
-  add_foreign_key "favourites", "cars", column: "cars_id"
-  add_foreign_key "reviews", "cars", column: "cars_id"
+  add_foreign_key "cars", "owners"
+  add_foreign_key "favourites", "cars"
+  add_foreign_key "reviews", "cars"
 end
