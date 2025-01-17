@@ -1,0 +1,24 @@
+.form {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  font-family: "lexend";
+  font-size: 12px;
+  color: $green;
+}
+
+h1 {
+  color: $green;
+}
+
+li {
+font-size: 12px;
+}
+
+// .card-form {
+//   overflow: hidden;
+//   background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+// }

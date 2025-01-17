@@ -1,1 +1,18 @@
-// Specific CSS for your home-page
+.home-center {
+  height: 500px;
+  position: relative;
+}
+
+.home-logo {
+  width: 80%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+body {
+  background-color: #00ff6a;
+}

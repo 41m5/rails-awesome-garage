@@ -12,4 +12,11 @@ class FavouritesController < ApplicationController
         redirect_to @car, alert: "There was an error adding this car to your garage."
       end
   end
+
+  def destroy
+    @favourite = Favourite.find(params[:id]) # Locate the specific favourite
+    @favourite.destroy
+    redirect_to favourites_path, notice: "Car removed from garage."
+  end
+
 end

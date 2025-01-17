@@ -1,9 +1,18 @@
-<h1>Awesome Garage</h1>
 
-<ul>
-  <% @cars.each do |car| %>
-    <li>
-      <%= link_to "#{car.brand}, #{car.model} | (#{car.year})", car_path(car) %>
-    </li>
+
+<% @cars.each do |car| %>
+  <%= link_to car_path(car) do %>
+    <div class="card-car">
+       <div class="card-car-infos">
+        <h2><%= "#{car.brand}" %></h2>
+        <h3><%= "#{car.model} | (#{car.year})" %></h3>
+      </div>
+      <div class="card-car-image">
+        <%= image_tag(car.image_url, alt: "#{car.brand} #{car.model}") if car.image_url.present? %>
+      </div>
+      <div class="card-car-infos">
+      <h3>Comment</h3> <i class="fa-solid fa-comment"></i>
+      </div>
+    </div>
   <% end %>
-</ul>
+<% end %>

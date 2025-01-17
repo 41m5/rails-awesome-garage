@@ -1,0 +1,9 @@
+<div class="nav">
+  <%= link_to root_path do %>
+    <%= image_tag "awesome-garage-logo.svg", alt: "Awesome Garage Logo", class: "navbar-logo" %>
+  <% end %>
+  <div class="nav-right">
+    <%= link_to 'HOME', root_path %>
+    <%= link_to 'MY GARAGE', favourites_path %>
+  </div>
+</div>

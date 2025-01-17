@@ -1,0 +1,75 @@
+.card-car {
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 60%;
+  margin: 40px auto;
+
+  li {
+    padding: 0px;
+  }
+}
+
+.card-car img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-car .card-car-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-car h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: $green;
+}
+
+.card-car h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color:$green;
+}
+
+.card-car p {
+  font-family: "lexend";
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-car .card-car-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+
+  .fa-solid .fa-comment {
+    color: $green;
+  }
+
+  .card-car-image {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.card-car-infos .card-car-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.card-car .btn {
+  font-family: "changa one";
+  font-size: 12px;
+}

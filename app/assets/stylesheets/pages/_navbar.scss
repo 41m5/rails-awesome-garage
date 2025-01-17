@@ -1,0 +1,27 @@
+.nav {
+  background-color: black;
+  height: 100px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .navbar-logo {
+    width: 500px;
+  }
+
+  a {
+    color: #00ff6a;
+    text-decoration: none;
+    font-family: "Changa one", "Helvetica", "sans-serif";
+  }
+
+  .nav-right {
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    float: right;
+  }
+
+}

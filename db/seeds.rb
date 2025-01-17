@@ -9,8 +9,10 @@
 #   end
 
 puts "Cleaning database..."
-Owner.delete_all
+Review.delete_all
 Car.delete_all
+Favourite.delete_all
+Owner.delete_all
 puts "Complete."
 
 # Create Owners
@@ -19,8 +21,8 @@ owner2 = Owner.create(nickname: "Danny Zuko")
 owner3 = Owner.create(nickname: "Dom Toretto")
 
 # Create Cars
-car1 = owner1.cars.create(brand: "Batmobile", model: "Lincoln Futura", year: 1966, fuel: "Atomic batteries")
-car2 = owner2.cars.create(brand: "Greased Lightning", model: "Ford Super De Luxe", year: 1948, fuel: "Petrol")
-car3 = owner3.cars.create(brand: "Fast & The Furious", model: "Dodge Charger R/T", year: 1970, fuel: "Diesel")
+car1 = owner1.cars.create(brand: "Batmobile", model: "Lincoln Futura", year: 1966, fuel: "Atomic batteries", image_url: "https://i.ibb.co/zR45h5J/batmobile.png")
+car2 = owner2.cars.create(brand: "Back to the Future", model: "DeLorean DMC-12s", year: 1981, fuel: "Petrol", image_url: "https://i.ibb.co/1T1TTpp/delorean.png")
+car3 = owner3.cars.create(brand: "Fast & the Furious", model: "Dodge Charger R/T", year: 1970, fuel: "Diesel", image_url: "https://i.ibb.co/8YY0dVZ/fastfurious.png")
 
 puts "Seeded #{Owner.count} owners and #{Car.count} cars."
